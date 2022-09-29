@@ -1,4 +1,7 @@
-all: mycfile bits
+all: mycfile bits hash emoji
+
+emoji: emoji.c
+	gcc emoji.c -Wall -pedantic -g -O3 
 
 hash: hash.c
 	gcc hash.c -Wall -pedantic -g -O3 
