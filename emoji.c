@@ -33,7 +33,34 @@ int main (int argc, char **argv) {
 	emoji[4] = '\0';
 	printf("The byte: %s->5\n", emoji);
 
+	// What is the hex representation of the first 
+	// byte of the emoji char
+	if((emoji[0] & 0x80) == 0x80) {
+		printf("This is an emoji!!\n");
+	}
+	if((buf & 0x80) == 0x80) {
+		printf("This is an emoji!!\n");
+	}
+	printf("(emoji[0] & 0x80): %x\n", (emoji[0] & 0x80));
+	printf("(buf & 0x80): %x\n", (buf & 0x80));
+
+
+
+	if(0) {
+		printf("Here 0\n");
+	}
+	if (1) {
+		printf("Here 1\n");
+	}
+
 	close(fd);
 
 	return 0;
 }
+
+/*
+ * char * s = "sarah";
+ * ['s', 'a', 'r', 'a', 'h', '\0']
+ * ['0x73', '0x61', 'r', 'a', 'h', '\0']
+ * ['0x0f', '0x04', '\0'] 
+ */
