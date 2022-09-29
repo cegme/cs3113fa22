@@ -1,5 +1,8 @@
 all: mycfile bits
 
+hash: hash.c
+	gcc hash.c -Wall -pedantic -g -O3 
+
 mycfile: mycfile.o
 	gcc -o mycfile mycfile.o
 
